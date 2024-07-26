@@ -10,25 +10,27 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2); }
 
-/* line 18, sass/_base.scss */
+/* line 21, sass/_base.scss */
 * {
   margin: 0;
   padding: 0; }
 
-/* line 23, sass/_base.scss */
+/* line 26, sass/_base.scss */
 *,
 *::before,
 *::after {
   box-sizing: inherit; }
 
-/* line 29, sass/_base.scss */
+/* line 32, sass/_base.scss */
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-/* line 34, sass/_base.scss */
+/* line 37, sass/_base.scss */
 body {
   font-family: "Open sans";
   font-weight: 400;
@@ -52,7 +54,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -72,7 +74,27 @@ body {
 /* line 35, sass/_layout.scss */
 .hotel-view {
   background-color: #fff;
-  height: 80rem;
+  flex: 1; }
+
+/* line 40, sass/_layout.scss */
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line); }
+
+/* line 47, sass/_layout.scss */
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+/* line 56, sass/_layout.scss */
+.user-reviews {
+  background-color: yellowgreen;
   flex: 1; }
 
 /* line 4, sass/_components.scss */
@@ -235,7 +257,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  border-bottom: var(--line); }
   /* line 217, sass/_components.scss */
   .overview__heading {
     font-size: 2.25rem;
