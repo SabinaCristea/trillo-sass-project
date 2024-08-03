@@ -444,3 +444,55 @@ body {
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1; }
+
+/* line 462, sass/_components.scss */
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  /* line 466, sass/_components.scss */
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+
+/* line 476, sass/_components.scss */
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  /* line 492, sass/_components.scss */
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s; }
+  /* line 499, sass/_components.scss */
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  /* line 503, sass/_components.scss */
+  .btn__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%; }
+  /* line 511, sass/_components.scss */
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
+  /* line 519, sass/_components.scss */
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  /* line 523, sass/_components.scss */
+  .btn:hover .btn__invisible {
+    top: 0; }
+  /* line 527, sass/_components.scss */
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
