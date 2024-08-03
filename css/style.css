@@ -78,14 +78,14 @@ body {
 
 /* line 40, sass/_layout.scss */
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
 
-/* line 47, sass/_layout.scss */
+/* line 48, sass/_layout.scss */
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -94,8 +94,10 @@ body {
 
 /* line 56, sass/_layout.scss */
 .user-reviews {
-  background-color: yellowgreen;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /* line 4, sass/_components.scss */
 .logo {
@@ -313,9 +315,16 @@ body {
   cursor: pointer;
   transition: all 0.2s; }
   /* line 283, sass/_components.scss */
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
+  /* line 288, sass/_components.scss */
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
-  /* line 287, sass/_components.scss */
+    /* line 291, sass/_components.scss */
+    .btn-inline:hover span {
+      margin-left: 8px; }
+  /* line 296, sass/_components.scss */
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -331,11 +340,11 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
-/* line 312, sass/_components.scss */
+/* line 321, sass/_components.scss */
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
 
-/* line 318, sass/_components.scss */
+/* line 327, sass/_components.scss */
 .list {
   margin: 3rem 0;
   list-style: none;
@@ -344,11 +353,11 @@ body {
   border-bottom: var(--line);
   display: flex;
   flex-wrap: wrap; }
-  /* line 328, sass/_components.scss */
+  /* line 337, sass/_components.scss */
   .list__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem; }
-  /* line 333, sass/_components.scss */
+  /* line 342, sass/_components.scss */
   .list__item::before {
     content: "";
     display: inline-block;
@@ -361,22 +370,77 @@ body {
     mask-image: url(../img/chevron-thin-right.svg);
     mask-size: cover; }
 
-/* line 355, sass/_components.scss */
+/* line 364, sass/_components.scss */
 .recommend {
   font-size: 1.3rem;
   color: var(--color-grey-light-3);
   display: flex;
   align-items: center; }
-  /* line 362, sass/_components.scss */
+  /* line 371, sass/_components.scss */
   .recommend__count {
     margin-right: auto; }
-  /* line 369, sass/_components.scss */
+  /* line 378, sass/_components.scss */
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
     border: 3px solid white; }
-    /* line 376, sass/_components.scss */
+    /* line 385, sass/_components.scss */
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+/* line 394, sass/_components.scss */
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  /* line 403, sass/_components.scss */
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative; }
+  /* line 410, sass/_components.scss */
+  .review__user {
+    display: flex;
+    align-items: center; }
+  /* line 415, sass/_components.scss */
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  /* line 422, sass/_components.scss */
+  .review__user-box {
+    display: flex;
+    flex-direction: column; }
+  /* line 427, sass/_components.scss */
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem; }
+  /* line 434, sass/_components.scss */
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  /* line 439, sass/_components.scss */
+  .review__rating {
+    margin-left: auto;
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300; }
+  /* line 446, sass/_components.scss */
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 1; }
